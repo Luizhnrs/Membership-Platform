@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System.Runtime.InteropServices.ComTypes;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PlataformaDeMembros.Models;
 
 namespace PlataformaDeMembros.Data;
 
@@ -9,4 +11,8 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+    public DbSet<Member> Members { get; set; } = default!;
+    public DbSet<PremiumMembers> PremiumMember { get; set; } = default!;
+
 }
