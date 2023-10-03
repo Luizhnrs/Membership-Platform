@@ -14,7 +14,7 @@ public class Member
     [MinLength(5, ErrorMessage = "O Nome Deve Conter no Minimo 5 Caracteres")]
     [DisplayName("Nome Completo")]
     public string Name { get; set; } = string.Empty;
-
+    
     [Required(ErrorMessage = "Informe o Email")]
     [EmailAddress(ErrorMessage = "Email Invalido")]
     [DisplayName("E-Mail")]
